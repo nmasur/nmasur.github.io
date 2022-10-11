@@ -6,11 +6,19 @@ h1, h2, h3, h4, h5, h6, span.home, time, div.home, ul.home {
 /* Top of home page as flex links */
 div.home > ul {
     display: flex;
-    flex-wrap: wrap;
     list-style-type: none;
+    padding-left: 0;
 }
 
-/* Spread out home page links */
+/* Don't let links overlap */
 div.home > ul > li {
     margin: 1em;
-};
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #f0f2f4;
+        --text: #333d46;
+        --accent: #9d6f00;
+    }
+}
