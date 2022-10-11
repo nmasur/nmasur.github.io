@@ -1,10 +1,12 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 <hr>
+<div class="home">
 {{ .Content -}}
+</div>
 
 <h3>Posts</h3>
-<ul>
+<ul class="home">
 {{ range ( where .Site.RegularPages "Section" "posts" ).ByDate.Reverse }}
 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 {{ end }}

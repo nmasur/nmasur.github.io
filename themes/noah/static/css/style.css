@@ -1,1 +1,16 @@
-/* Nothing */
+/* Set most of the headers to lowercase */
+h1, h2, h3, h4, h5, h6, span.home, time, div.home, ul.home {
+    text-transform: lowercase;
+}
+
+/* Top of home page as flex links */
+div.home > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+/* Spread out home page links */
+div.home > ul > li {
+    margin: 1em;
+};

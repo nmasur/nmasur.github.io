@@ -1,6 +1,6 @@
 {{ define "main" }}
 <br>
-<a href="/">Home</a>
+<span class="home"><a href="/">Home</a></span>
 
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
