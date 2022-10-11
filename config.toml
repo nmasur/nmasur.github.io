@@ -1,0 +1,4 @@
+baseURL = 'https://nmasur.github.io/'
+languageCode = 'en-us'
+title = "Noah Masur's Site"
+theme = "noah"
