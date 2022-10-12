@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6, span.home, time, div.home, ul.home {
 /* Top of home page as flex links */
 div.home > ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-left: 0;
 }
