@@ -7,5 +7,5 @@ title: "Noah Masur's Site"
 - [Books](https://books.masu.rs)
 - [Minecraft](/minecraft/)
 - [Files](https://cloud.masu.rs)
-- [Metrics](https://metrics.masu.rs)
+- [Metrics](https://metrics.masu.rs/d/wcZar5I4k/basic)
 - [RSS](/index.xml)
