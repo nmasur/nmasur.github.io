@@ -5,6 +5,6 @@ draft: false
 
 Connect to multiplayer (Java Edition):
 
-Server: `minecraft.masu.rs`
+Server: `minecraft.masu.rs:49732`
 
-Port: `25565`
+You have to include the port because it's not using the default `25565`.
