@@ -2,9 +2,9 @@
 title: "Noah Masur's Site"
 ---
 
-- [GitHub](http://github.com/nmasur)
+- [GitHub](https://github.com/nmasur)
+- [Gitea](https://git.masu.rs/explore/repos)
 - [Videos](/stream/)
 - [Books](https://books.masu.rs)
 - [Minecraft](/minecraft/)
-- [Git](https://git.masu.rs/explore/repos)
 - [RSS](/index.xml)
