@@ -4,6 +4,6 @@ date: 2022-10-11T01:39:06Z
 draft: false
 ---
 
-This is my new website.
+This is my website.
 
-It's currently quite experimental.
+It's currently very basic.
