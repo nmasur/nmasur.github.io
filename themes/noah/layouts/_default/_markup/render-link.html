@@ -1,1 +1,1 @@
-<a {{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener" href="{{ .Destination | safeURL }}"{{ else }}href="{{ (.Page.GetPage .Destination).RelPermalink | safeURL }}"{{ end }}>{{ .Text | safeHTML }}</a>{{- /* Strip trailing newline. */ -}}
+<a href={{ if strings.HasSuffix .Destination ".md" }}"{{ (.Page.GetPage .Destination).RelPermalink | safeURL }}"{{ else }}"{{ .Destination | safeURL }}" target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>{{- /* Strip trailing newline. */ -}}
