@@ -1,19 +1,19 @@
 ---
-title: NextCloud Behind Caddy on NixOS
+title: Nextcloud Behind Caddy on NixOS
 date: "2023-08-29T11:56:26Z"
 tags: [  ]
 draft: false
 ---
 
-NextCloud can technically run behind [any reverse
+Nextcloud can technically run behind [any reverse
 proxy](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/reverse_proxy_configuration.html)
 but their documentation is sparse and don't include full examples.
 
-The NextCloud [NixOS
+The Nextcloud [NixOS
 module](https://github.com/NixOS/nixpkgs/blob/nixos-unstable/nixos/modules/services/web-apps/nextcloud.nix)
 automatically enables nginx by default. Since I run Caddy bound to 443 for the
 rest of my services, I didn't want to have to proxy to a local nginx service
-just to hit NextCloud. They have [some
+just to hit Nextcloud. They have [some
 documentation](https://nixos.org/manual/nixos/stable/index.html#module-services-nextcloud-httpd)
 for using Apache httpd, but I had to adjust for Caddy.
 
@@ -21,7 +21,7 @@ for using Apache httpd, but I had to adjust for Caddy.
 is my full configuration on my system, but I'll break it down to explain it in
 detail.
 
-First, after enabling NextCloud, you should at least have the following in your
+First, after enabling Nextcloud, you should at least have the following in your
 configuration.
 
 ```nix
@@ -29,9 +29,9 @@ services.nextcloud.config.trustedProxies = [ "127.0.0.1" ];
 ```
 
 This allows any local reverse proxy (including nginx, Caddy, etc.) to connect
-to the NextCloud service.
+to the Nextcloud service.
 
-Next, we disable nginx, since enabling the NextCloud module will enable nginx
+Next, we disable nginx, since enabling the Nextcloud module will enable nginx
 by default:
 
 ```nix
@@ -39,7 +39,7 @@ services.nginx.enable = false;
 ```
 
 We have to make sure that Caddy's user will have access to talk to the
-NextCloud PHP service and access to the files served by NextCloud.
+Nextcloud PHP service and access to the files served by Nextcloud.
 
 ```nix
 services.phpfpm.pools.nextcloud.settings = {
@@ -49,7 +49,7 @@ services.phpfpm.pools.nextcloud.settings = {
 users.users.caddy.extraGroups = [ "nextcloud" ];
 ```
 
-(Your users and groups for Caddy and NextCloud may be different, so keep that
+(Your users and groups for Caddy and Nextcloud may be different, so keep that
 in mind).
 
 The next step is where things get serious because we have to generate Caddy's
@@ -111,9 +111,9 @@ and then act as a reverse-proxy by connecting to the local port `1234` on your
 machine where the service is running. This is how I setup most of my web
 services.
 
-With NextCloud, things will be a little different. The best Caddy reference I
+With Nextcloud, things will be a little different. The best Caddy reference I
 found was [this Reddit
-comment](https://www.reddit.com/r/NextCloud/comments/gn7fdl/looking_for_caddy_v2_sample_config_for_nextcloud/frjj50c/)
+comment](https://www.reddit.com/r/Nextcloud/comments/gn7fdl/looking_for_caddy_v2_sample_config_for_nextcloud/frjj50c/)
 with a working Caddyfile. However, we need to translate it for our JSON
 configuration.
 
@@ -132,8 +132,8 @@ caddy.routes = [{
 }];
 ```
 
-All of our NextCloud routes I describe below will be _subroutes_ of the
-original handle, which matches on the hostname of our NextCloud service.
+All of our Nextcloud routes I describe below will be _subroutes_ of the
+original handle, which matches on the hostname of our Nextcloud service.
 
 The first subroute sets variables and headers for the other subroutes. The
 variable is required for working with apps, and the header enforces the use of
@@ -157,8 +157,8 @@ HTTPS on the browser.
 
 The next subroute makes use of this `root` variable to serve content from the
 `/nix-apps/` and `/store-apps/` directories, which are the built-in and
-marketplace plugins for NextCloud. You will likely need this even if you are
-just using NextCloud out of the box.
+marketplace plugins for Nextcloud. You will likely need this even if you are
+just using Nextcloud out of the box.
 
 ```nix
 {
@@ -277,4 +277,4 @@ Finally, all other requests are served simply as static files:
 { handle = [{ handler = "file_server"; }]; }
 ```
 
-That's it! Now Caddy will serve as the ingress to NextCloud directly.
+That's it! Now Caddy will serve as the ingress to Nextcloud directly.
