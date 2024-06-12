@@ -108,7 +108,7 @@ You could also just override the `caddy` package and not bother to update
 explicitly, and 2) I can conditionally enable this version of the package only
 for machines that use Cloudflare, in case I 
 
-In my [previous post](./nextcloud-caddy-nixos/), I explained that I use the
+In my [previous post](./nextcloud-caddy-nixos.md), I explained that I use the
 JSON config format instead of a traditional Caddyfile, which gives me more
 control over options as well as the ability to merge together routes from
 different services.
