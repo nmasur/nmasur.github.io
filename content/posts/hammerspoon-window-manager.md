@@ -1,6 +1,7 @@
 ---
 title: "Using Hammerspoon as a macOS Window Manager"
 date: 2024-11-15T10:52:53-07:00
+tags: [ ]
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Prebuilding and Running AWS Instances with NixOS, GitHub Actions, and Terraform"
 date: 2024-11-14T15:58:23-07:00
+tags: [ ]
 draft: false
 ---
 
