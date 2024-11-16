@@ -1,6 +1,6 @@
 ---
 title: "Package Language Servers Into Neovim Using Nix"
-date: 2024-11-16T21:25:05-07:00
+date: 2024-11-16T11:25:05-07:00
 tags: [ ]
 draft: false
 ---
