@@ -55,7 +55,7 @@ However, the next day I receive a strange email from the Apple Store stating
 the following:
 
 > We have some important information about the service of your product. Please
-> get in touch as soon as possible—you can contact us at <phone number>.
+> get in touch as soon as possible—you can contact us at (123) 456-7890.
 
 That seemed a little less than ideal, but I wasn't too worried. I called the
 number and found an automated message directing me to various lines. I
@@ -113,7 +113,7 @@ laptop for repair once again. I was ready to have this over with.
 On Saturday, I once again receive the dreaded email:
 
 > We have some important information about the service of your product. Please
-> get in touch as soon as possible—you can contact us at <phone number>.
+> get in touch as soon as possible—you can contact us at (098) 765-4321.
 
 This time I know what to expect. I don't bother calling. I just have to come in
 during work hours and get the password again to run the diagnostic once more.
@@ -141,6 +141,8 @@ the case.
 I knew immediately at that point that I had to give up with the Apple Store.
 This whole mess probably should have gone through the IT RMA process the entire
 time and I was hopelessly naive.
+
+---
 
 So the lesson is thus: Don't do what I did. Don't try to bring a managed
 computer to the Apple Store for repair.
